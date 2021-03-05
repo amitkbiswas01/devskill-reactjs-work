@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+## Assignment: API and Router
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The purpose of this assignment is to demonstrate the understanding of React Router, API Integration.
 
-## Available Scripts
+### Task
 
-In the project directory, you can run:
+Requirements:
 
-### `npm start`
+There should be multiple pages:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Home
+2. Product details
+3. Create Product
+4. 404
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+All the data will come from API. API documentation link: https://fakestoreapi.com/docs
 
-### `npm test`
+Deliverable:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. On top of the application, there will be a navigation which can be accessible from any page. There will be link for Home, Create Products
 
-### `npm run build`
+2. In home page, there will be the listing of all the product. Each and every products will be clickable.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. When ever the user click one of the products, the user will be redirected to the details page of the product. In detail page, the data of the product will come from API> https://fakestoreapi.com/products/{product-id}
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. On Create Prodcuts page, Add forms for creating product with all the information required for the create product API mentioned in the API doc.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. On Product details page, there will be an edit button, it will take user to a page where user can update the product information. The page design will be same as product create, But all the fields will be pre filled with existing information.
 
-### `npm run eject`
+6. As before, there will be loader for each page. This time, the loader will hide when API communication is done.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+7. 404 page will work as before.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Questions:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- How to differentiate between `product/:id` and `product/create` with moving `product/:id` at the bottom?(`App.js` line:26)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Is setting global variable outside component a good practice? (`ProductCreate.jsx` line:5)
