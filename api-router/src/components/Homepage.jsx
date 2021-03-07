@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import Loading from "./Loading";
 
@@ -9,7 +9,7 @@ function Homepage() {
   const history = useHistory();
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products/", {
+    fetch("https://fakestoreapi.com/products", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -60,7 +60,7 @@ function Homepage() {
                   ${product.price}
                 </p>
                 <button className=" bg-gray-800 text-gray-100 px-2 py-2 rounded-md mr-2">
-                  Update
+                  <Link to={`/products/update/${product.id}`}>Update</Link>
                 </button>
               </div>
             </div>

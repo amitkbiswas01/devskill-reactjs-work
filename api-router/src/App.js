@@ -3,6 +3,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Homepage from "./components/Homepage";
 import ProductDetail from "./components/ProductDetail";
 import ProductCreate from "./components/ProductCreate";
+import ProductUpdate from "./components/ProductUpdate";
 import Navigation from "./components/Navigation";
 import NotFound from "./components/404";
 
@@ -21,7 +22,7 @@ function App() {
           <ProductCreate />
         </Route>
         <Route exact path="/products/update/:id">
-          <ProductCreate />
+          <ProductUpdate />
         </Route>
         <Route exact path="/products/:id">
           <ProductDetail />
